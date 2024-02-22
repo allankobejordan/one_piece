@@ -1,9 +1,8 @@
 
 import React, {useEffect, useState} from 'react';
-import './assets/css/App.css';
 import api from "./services/api";
 import Card from "./components/Card";
-
+import Table from './components/Table';
 
 //componentes
 export default function App(){
@@ -19,13 +18,14 @@ export default function App(){
     }, [])
 
     console.log(personagem)
-    
-    let info = personagem.slice(0, 3).map(char => <Card  key = {char.id} nome ={char.name} profissao={char.job}/>)
+  
+    // let info = personagem.map(char => <Card  key = {char.id} nome ={char.name} profissao={char.job}/>)
     return (
         <>
             <div className='container-fluid'>
-                <div className="d-flex justify-content-center align-items-center" >
-                 {info}
+                <div className="center" >
+                    <Table data={personagem}/>
+                 {/* {info} */}
                 </div>
             </div>
           

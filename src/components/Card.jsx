@@ -1,30 +1,32 @@
-import { useState } from 'react';
-import React from 'react';
-import "../assets/bootstrap/css/bootstrap.min.css";
-export default function cards(){
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
-const [id, nome, idade, bandeira, profissao, recompensa] = useState(); 
-    return(
-        <>
-            <div className="card" style={{width: '18rem;'}}>
-
-            <div className="card-body">
-                <input type="hidden">{id}</input>
-                <h5 className="card-title">{nome}</h5>
-                <h6 className="card-title">{profissao}</h6>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item">{nome}</li>
-                <li className="list-group-item">A second item</li>
-                <li className="list-group-item">A third item</li>
-            </ul>
-            <div className="card-body">
-                <a href="#" className="card-link">Card link</a>
-                <a href="#" className="card-link">Another link</a>
-            </div>
-            </div>
-        </>
-    )
+export default function MediaCard() {
+  return (
+    <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image="/static/images/cards/contemplative-reptile.jpg"
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
 }
-
