@@ -1,12 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Table = ({ data, pageSize }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const lastIndex = currentPage * pageSize;
-  const firstIndex = lastIndex - pageSize;
-  const currentData = data.slice(firstIndex, lastIndex);
+const Table = ({ data }) => {
+ 
   return (
     <>
         <table>
