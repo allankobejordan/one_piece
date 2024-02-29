@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import "../assets/bootstrap/css/bootstrap-grid.css";
 import "../assets/bootstrap/css/bootstrap.min.css";
 import { yellow } from '@mui/material/colors';
+import ReactPaginate from 'react-paginate';
 
 
 export default function MediaCard({ nome, profissao, recompensa, bandeira }) {
@@ -19,7 +20,7 @@ export default function MediaCard({ nome, profissao, recompensa, bandeira }) {
         </Typography>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image="/src/assets/images/wanted/luffy.jpg"
         title="green iguana"
       />
       <CardContent >
